@@ -101,7 +101,7 @@ jobs:
           apt-get update 
         
           apt-get install -y \
-            git curl wget unzip zip rsync procps aria2 \
+            git curl wget unzip zip rsync procps aria2 sudo \
             bc flex bison cpio dwarves \
             libelf-dev libssl-dev \
             python3 python3-pip \
