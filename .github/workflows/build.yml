@@ -80,6 +80,8 @@ jobs:
   build-kernel:
     name: "Build: ${{ matrix.variant }}"
     runs-on: ubuntu-latest
+    container:
+      image: debian:12
     outputs:
       ci_version: ${{ steps.extract_version.outputs.CI_VERSION }}
     strategy:
