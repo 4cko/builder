@@ -81,7 +81,7 @@ jobs:
     name: "Build: ${{ matrix.variant }}"
     runs-on: ubuntu-latest
     container:
-      image: debian:12
+      image: ghcr.io/mydapitt/deb:jammy
     outputs:
       ci_version: ${{ steps.extract_version.outputs.CI_VERSION }}
     strategy:
@@ -101,7 +101,7 @@ jobs:
           apt-get update 
         
           apt-get install -y \
-            git curl wget unzip zip rsync aria2 \
+            git curl wget unzip zip rsync procps aria2 \
             bc flex bison cpio dwarves \
             libelf-dev libssl-dev \
             python3 python3-pip \
