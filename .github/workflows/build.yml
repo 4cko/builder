@@ -124,7 +124,7 @@ jobs:
     strategy:
       fail-fast: false
 
-     matrix:
+      matrix:
         variant: ${{ fromJSON(
           github.event.inputs.buildKSU == 'all' && '["vanilla", "ksu"]' ||
           github.event.inputs.buildKSU == 'vanilla' && '["vanilla"]' ||
